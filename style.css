@@ -76,7 +76,6 @@ body {
 .reset-btn {
     padding: 10px 35px;
     margin-top: 1rem;
-    margin-left: 17rem;
 }
 .result {
     text-align: center;
@@ -88,6 +87,7 @@ body {
     border: 1px solid rgba(209, 213, 219, 0.3);
     animation: fadeIn 1s ease-in-out;
     margin-bottom: 1rem;
+    width: 400px;
 }
 
 .result #output {
@@ -95,7 +95,6 @@ body {
     color: whitesmoke;
     margin-top: 20px;
     animation: fadeIn 1s ease-in-out;
-    width: 400px;
 }
 
 @keyframes fadeIn {
@@ -117,5 +116,60 @@ body {
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+   
+    body{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .container{
+        width: 250px;
+    }
+    .calculator{
+        flex-direction: column;
+    }
+
+    .container h1{
+        font-size: 1.5rem;
+    }
+    
+
+    .result {
+        font-size: 1.2em;
+        width: 250px;
+    }
+
+    .result #output{
+        font-size: 1em;
+    }
+
+    .reset-btn{
+        margin-left: 0
+    }
+}
+
+@media  (max-width: 600px) and (min-width: 426px) {
+    .title {
+        font-size: 1.5em;
+    }
+
+    .container{
+        width: 300px;
+    }
+    
+    .input-field, .btn {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .result {
+        font-size: 1.2em;
+        width: 300px;
     }
 }
